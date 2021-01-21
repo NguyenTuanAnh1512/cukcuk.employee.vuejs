@@ -107,7 +107,7 @@ export default {
 <style>
  /* file dialog.css */
 .dialog {
-  display: block;
+  display: none;
 
 }
 
