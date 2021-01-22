@@ -52,18 +52,10 @@
                   <th style="width: 9%">Tình trạng công việc</th>
                 </thead>
                 <tbody id="tbody">
-                  <tr>
-                    <td>NV0001</td>
-                    <td>Nguyễn Tuấn Anh</td>
-                    <td>Nam</td>
-                    <td>15-12-1999</td>
-                    <td>0399945465</td>
-                    <td>tuananhnta99@gmail.com</td>
-                    <td>Nhân viên</td>
-                    <td>Phòng công nghệ</td>
-                    <td>10000000</td>
-                    <td>Đang làm việc</td>
-                  </tr>
+                  <Employee />
+                  <Employee />
+                  <Employee />
+                  <Employee />
                 </tbody>
             </table>
         </div>
@@ -75,6 +67,7 @@
 
 <script>
 import Paging from './Paging';
+import Employee from './Employee';
 
 export default {
   name: 'Content',
@@ -85,6 +78,7 @@ export default {
   },
   components:{
     Paging,
+    Employee,
   }
 }
 </script>

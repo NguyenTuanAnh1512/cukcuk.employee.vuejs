@@ -8,58 +8,75 @@
 
         <!--menu-->
         <div class="menu">
-            <div class="menu__item">
-                <div class="menu__item--icon icon_dashboard"></div>
-                <div class="menu__item--text">
-                    Tổng quan
-                </div>
-            </div>
-            <div class="menu__item">
-                <div class="menu__item--icon icon_report"></div>
-                <div class="menu__item--text">
-                    Báo cáo
-                </div>
-            </div>
-            <div class="menu__item">
-                <div class="menu__item--icon icon_dashboard"></div>
-                <div class="menu__item--text">
-                    Mua hàng
-                </div>
-            </div>
-            <div class="menu__item">
-                <div class="menu__item--icon icon_dic-employee"></div>
-                <div class="menu__item--text">
-                    Danh mục khách hàng
-                </div>
-            </div>
-            <div class="menu__item">
-                <div class="menu__item--icon icon_dic-employee"></div>
-                <div class="menu__item--text">
-                    Danh mục khách hàng
-                </div>
-            </div>
-            <div class="menu__item">
-                <div class="menu__item--icon icon_setting"></div>
-                <div class="menu__item--text">
-                    Thiết lập hệ thống
-                </div>
-            </div>
+          <Menu-item
+            v-for="(item, index) in menu_items" :key="index"
+            v-bind:item = item
+          ></Menu-item>
         </div>
     </div>
 </template>
 
 <script>
+import MenuItem from './MenuItems';
+
 export default {
+  components: { MenuItem },
   name: "left-menu",
   data() {
     return {
-
+      menu_items: [{
+        name: 'Tổng quan',
+        icon_class: 'icon_dashboard',
+        },
+        {
+          name: 'Báo cáo',
+          icon_class: 'icon_report',
+        },
+        {
+          name: 'Mua hàng',
+          icon_class: 'icon_dashboard',
+        },
+        {
+          name: 'Danh mục khách hàng',
+          icon_class: 'icon_dic-employee',
+        },
+        {
+          name: 'Thiết lập hệ thống',
+          icon_class: 'icon_setting',
+      }]
     }
   },
 }
 </script>
 
+
 <style>
+.menu {
+
+}
+
+.menu .menu__item {
+display: flex;
+align-items: center;
+width: 100%;
+height: 44px;
+}
+
+.menu .menu__item:hover {
+    background-color: #e3e3e3;
+    cursor: pointer;
+}
+
+.menu .menu__item .menu__item--icon {
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    margin-left: 16px;
+}
+
+.menu .menu__item .menu__item--text {
+    margin-left: 4px;
+}
   .left-menu {
       width: 200px;
       height: 100vh;

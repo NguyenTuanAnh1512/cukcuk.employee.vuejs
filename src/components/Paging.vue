@@ -31,5 +31,19 @@ export default {
 </script>
 
 <style>
+.icon_nextpage {
+  background-image: url('/content/icon/btn-next-page.svg');
+}
 
+.icon_prevpage {
+  background-image: url('/content/icon/btn-prev-page.svg');
+}
+
+.icon_firstpage {
+  background-image: url('/content/icon/btn-firstpage.svg');
+}
+
+.icon_lastpage {
+  background-image: url('/content/icon/btn-lastpage.svg');
+}
 </style>
